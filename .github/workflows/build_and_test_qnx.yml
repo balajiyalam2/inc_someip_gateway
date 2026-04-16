@@ -36,7 +36,7 @@ jobs:
       pull-requests: read
     with:
       # TODO: build all targets ( //... ) once python toolchain issue is resolved.
-      bazel-target: "--lockfile_mode=error //src/... //tests/... //examples/..."
+      bazel-target: "//src/... //tests/... //examples/..."
       bazel-config: ${{ matrix.bazel-config }}
       credential-helper: ".github/tools/qnx_credential_helper.py"
       bazel-disk-cache: ${{ github.workflow }}-${{ matrix.bazel-config }}
